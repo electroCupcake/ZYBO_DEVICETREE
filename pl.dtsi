@@ -11,7 +11,7 @@
 		#size-cells = <1>;
 		compatible = "simple-bus";
 		ranges ;
-		axi_gpio_0: gpio@41200000 {
+		axi_gpio_0: switches@41200000 {
 			#gpio-cells = <2>;
 			compatible = "xlnx,xps-gpio-1.00.a";
 			gpio-controller ;
@@ -29,7 +29,8 @@
 			xlnx,tri-default = <0xFFFFFFFF>;
 			xlnx,tri-default-2 = <0xFFFFFFFF>;
 		};
-		axi_gpio_1: gpio@41210000 {
+
+		axi_gpio_1: leds@41210000 {
 			#gpio-cells = <2>;
 			compatible = "xlnx,xps-gpio-1.00.a";
 			gpio-controller ;
@@ -47,7 +48,7 @@
 			xlnx,tri-default = <0xFFFFFFFF>;
 			xlnx,tri-default-2 = <0xFFFFFFFF>;
 		};
-		axi_gpio_2: gpio@41220000 {
+		axi_gpio_2: buttons@41220000 {
 			#gpio-cells = <2>;
 			compatible = "xlnx,xps-gpio-1.00.a";
 			gpio-controller ;
