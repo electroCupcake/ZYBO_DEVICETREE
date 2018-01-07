@@ -70,12 +70,12 @@
 			compatible = "xlnx,xps-tft-2.00.a";
 			interrupt-parent = <&intc>;
 			interrupts = <0 59 1>;
-			xlnx,dcr-splb-slave-if = <0x1>;
 			reg = <0x44a00000 0x10000>;
-			//resolution = <640 480>;
-			//virtual-resolution = <1048 480>;
-			//phys-size = <640 480>;
-			//rotate-display;
+			xlnx,dcr-splb-slave-if = <0x1>;
+		};
+		simp_add: simpleAdder@0x43c00000 {
+			compatible = "jdc,simpleAdder-1.0";
+			reg = < 0x43c00000 0x1000 >;
 		};
 	};
 };
