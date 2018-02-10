@@ -38,6 +38,20 @@
 	gpio-mask-high = <0x0>;
 	gpio-mask-low = <0x5600>;
 };
+&i2c0 {
+	status = "okay";
+	clock-frequency = <100000>;
+	ssm2603: ssm2603@1a {
+		#sound-dai-cells = <0>;
+		compatible = "adi,ssm2603";
+		reg = <0x1a>;
+	};
+	eeprom@50 {
+		/* Microchip 24AA02E48 */
+		compatible = "microchip,24c02";
+		reg = <0x50>;
+	};
+};
 &intc {
 	num_cpus = <2>;
 	num_interrupts = <96>;
